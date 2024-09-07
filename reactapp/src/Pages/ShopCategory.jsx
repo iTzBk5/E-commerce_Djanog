@@ -31,7 +31,7 @@ const ShopCategory = (props) => {
               <Item
                 id={item.id}
                 name={item.name}
-                image={`http://localhost:8000${item.image}`} // Adjust the image path as needed
+                image={`https://e-commercedjanog-production.up.railway.app${item.image}`} // Adjust the image path as needed
                 price={item.price}
                 sale_price={item.sale_price}
                 is_sale={item.is_sale}

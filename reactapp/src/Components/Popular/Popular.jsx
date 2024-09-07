@@ -8,7 +8,7 @@ export const Popular = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/products/')
+    axios.get('https://e-commercedjanog-production.up.railway.app/api/products/')
       .then(response => {
         setProducts(response.data);
       })
@@ -32,7 +32,7 @@ export const Popular = () => {
               <Item
                 id={product.id}
                 name={product.name}
-                image={`http://localhost:8000${product.image}`}
+                image={`https://e-commercedjanog-production.up.railway.app${product.image}`}
                 price={product.price}
                 is_sale={product.is_sale}
                 sale_price={product.sale_price}
