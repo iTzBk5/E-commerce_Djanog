@@ -55,7 +55,7 @@ export const Cartitems = () => {
     };
   
     try {
-      const response = await fetch('https://e-commercedjanog-production.up.railway.app/api/order/', {
+      const response = await fetch('http://localhost:8000/api/order/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ export const Cartitems = () => {
           return (
             <div key={product.id}>
               <div className="cartitems-format cartitems-format-main">
-                <img src={`https://e-commercedjanog-production.up.railway.app${product.image}`} alt="" className='carticon-product-icon' />
+                <img src={`http://localhost:8000${product.image}`} alt="" className='carticon-product-icon' />
                 <p>{product.name}</p>
                 <p>${itemPrice}</p>
                 <button className='cartitems-quantity'>{cartItems[product.id]}</button>

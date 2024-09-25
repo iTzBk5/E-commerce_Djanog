@@ -49,7 +49,7 @@ export const ShopContextProvider = (props) => {
   };
 
   useEffect(() => {
-    axios.get('https://e-commercedjanog-production.up.railway.app/api/products/')
+    axios.get('http://localhost:8000/api/products/')
       .then(response => {
         setProducts(response.data);
 

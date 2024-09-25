@@ -10,7 +10,7 @@ const Product = () => {
   const {addToCart} = useContext(ShopContext);
 
   useEffect(() => {
-    axios.get(`https://e-commercedjanog-production.up.railway.app/api/products/${productId}/`) // Adjust the URL based on your setup
+    axios.get(`http://localhost:8000/api/products/${productId}/`) // Adjust the URL based on your setup
       .then(response => {
         setProduct(response.data);
       })

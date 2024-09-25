@@ -26,7 +26,21 @@ SECRET_KEY = 'django-insecure-%ecqg&&n1wd1x*)z0!bs6veh%q=7&(1*)6&@aobjr2#+%jf15x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    ]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React development server
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,7 +92,12 @@ WSGI_APPLICATION = 'chatBot.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

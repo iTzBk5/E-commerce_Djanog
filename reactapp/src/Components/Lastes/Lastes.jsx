@@ -22,7 +22,7 @@ export const Lastes = () => {
               <Item
                 id={product.id}
                 name={product.name}
-                image={`https://e-commercedjanog-production.up.railway.app${product.image}`} // Adjust the image path as needed
+                image={`http://localhost:8000${product.image}`} // Adjust the image path as needed
                 price={product.price}
                 is_sale={product.is_sale}
                 sale_price={product.sale_price}
